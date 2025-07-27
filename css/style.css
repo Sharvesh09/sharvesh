@@ -1,1 +1,225 @@
+/* --- Active Navigation Link --- */
+.nav-links a.active {
+    color: var(--color-accent-rosegold); /* Highlight active page */
+    font-weight: 700;
+}
 
+.nav-links a.active::after {
+    width: 100%; /* Ensure underline is present for active link */
+}
+
+
+/* --- About Hero Section --- */
+.about-hero-section {
+    display: flex;
+    flex-direction: row; /* Default: content on left, image on right */
+    justify-content: center;
+    align-items: center;
+    gap: 80px; /* Ample space between content and image */
+    min-height: 85vh; /* Ensure it takes up most of the viewport height */
+    padding-top: 80px; /* Space from header */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.about-content {
+    flex: 1; /* Takes up available space */
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-content .section-title {
+    text-align: left; /* Override global section-title centering */
+    font-size: 3.5em; /* Make it prominent */
+    margin-bottom: 0.8em;
+}
+
+.about-content .section-title::after {
+    left: 0; /* Align underline to left */
+    transform: translateX(0);
+}
+
+.about-content p {
+    font-size: 1.15em;
+    margin-bottom: 1.5em;
+    color: var(--color-text-light);
+    line-height: 1.8;
+}
+
+.quote {
+    font-family: var(--font-heading); /* Use heading font for quote */
+    font-size: 1.6em;
+    font-style: italic;
+    color: var(--color-secondary-accent-grey); /* Muted grey for a softer look */
+    border-left: 3px solid var(--color-accent-rosegold); /* Rose gold line on left */
+    padding-left: 25px;
+    margin: 2em 0;
+    line-height: 1.5;
+}
+
+.quote::before {
+    content: '“'; /* Opening quote mark */
+    font-size: 2em;
+    line-height: 0.1em;
+    margin-right: 0.1em;
+    vertical-align: -0.4em;
+    color: var(--color-accent-rosegold);
+}
+
+.quote::after {
+    content: '”'; /* Closing quote mark */
+    font-size: 2em;
+    line-height: 0.1em;
+    margin-left: 0.1em;
+    vertical-align: -0.4em;
+    color: var(--color-accent-rosegold);
+}
+
+.quote strong {
+    font-weight: 700;
+    color: var(--color-text-light);
+}
+
+.learn-more-btn {
+    margin-top: 2em; /* Space below quote */
+}
+
+/* --- Profile Image with Hexagon Effect --- */
+.about-image-container {
+    position: relative;
+    width: 400px; /* Size of the hexagon container */
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5%; /* Keep some space from the edge */
+    z-index: 1; /* Ensure image container is above other elements if needed */
+}
+
+.hexagon-shape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-secondary-dark); /* Muted rose/brownish red */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    /* Light foreshadowing: subtle rose gold glow */
+    box-shadow: 0 0 40px rgba(229, 182, 168, 0.4), /* Outer glow */
+                0 0 20px rgba(229, 182, 168, 0.6); /* Inner glow */
+    transition: transform var(--transition-speed);
+}
+
+.profile-picture {
+    position: relative; /* Relative to its normal position in the flex container */
+    width: 350px; /* Size of the image */
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%; /* Make it circular */
+    border: 5px solid var(--color-accent-rosegold); /* Rose gold border around the circle */
+    z-index: 2; /* Ensure image is above the hexagon */
+    /* Position half inside, half above the hexagon */
+    transform: translateY(-25%); /* Adjust this value to fine-tune how much it's "above" */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+/* Hover effect for the hexagon and image */
+.about-image-container:hover .hexagon-shape {
+    transform: scale(1.02); /* Slightly enlarge hexagon */
+    box-shadow: 0 0 50px rgba(229, 182, 168, 0.6),
+                0 0 30px rgba(229, 182, 168, 0.8);
+}
+
+.about-image-container:hover .profile-picture {
+    transform: translateY(-28%) scale(1.03); /* Lift and enlarge image slightly */
+}
+
+
+/* --- About Sub-Sections (for the bottom of About page) --- */
+.about-sub-sections {
+    text-align: center;
+    background-color: var(--color-secondary-dark);
+    margin: 40px auto;
+    padding: 60px 5%;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-sub-sections .section-title {
+    margin-bottom: 1.5em;
+    color: var(--color-accent-rosegold);
+}
+
+.about-sub-sections .section-title::after {
+    background: var(--color-accent-rosegold);
+}
+
+.sub-section-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Space between buttons */
+}
+
+
+/* --- Responsive Adjustments for About Page --- */
+@media (max-width: 992px) {
+    .about-hero-section {
+        flex-direction: column; /* Stack content and image on smaller screens */
+        text-align: center;
+        gap: 50px;
+        padding-top: 50px;
+    }
+
+    .about-content {
+        max-width: 80%;
+        text-align: center;
+    }
+
+    .about-content .section-title {
+        text-align: center;
+    }
+
+    .about-content .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .about-image-container {
+        margin-right: 0; /* Remove right margin when stacked */
+        margin-bottom: 50px; /* Space below image */
+    }
+
+    .profile-picture {
+        transform: translateY(-20%); /* Adjust for smaller screens if needed */
+    }
+
+    .sub-section-links {
+        flex-direction: column; /* Stack sub-section buttons */
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-hero-section {
+        gap: 30px;
+    }
+    .about-content {
+        padding: 0 20px;
+    }
+    .hero-title {
+        font-size: 3em;
+    }
+    .quote {
+        font-size: 1.3em;
+        padding-left: 15px;
+    }
+    .about-image-container {
+        width: 300px;
+        height: 300px;
+    }
+    .profile-picture {
+        width: 260px;
+        height: 260px;
+        border-width: 3px;
+    }
+}
