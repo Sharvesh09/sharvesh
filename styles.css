@@ -62,8 +62,8 @@ body {
 
 /* Text Content */
 .text-content h1 {
-  font-size: 80px !important;   /* Much bigger */
-  margin-bottom: 25px;
+  font-size: 100px !important;   /* Much bigger */
+  margin-bottom: 30px;
   color: #FFD700 !important;    /* Gold */
   font-weight: bold;
 }
