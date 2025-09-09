@@ -61,39 +61,37 @@ body {
 }
 
 /* Text Content */
-.text-content {
-  max-width: 50%;
-}
-
 .text-content h1 {
-  font-size: 70px; /* Bigger name */
+  font-size: 80px !important;   /* Much bigger */
   margin-bottom: 25px;
-  color: #FFD700; /* Gold */
+  color: #FFD700 !important;    /* Gold */
+  font-weight: bold;
 }
 
 .text-content .quote {
-  font-size: 26px; /* Bigger quote */
+  font-size: 28px !important;   /* Bigger */
   font-style: italic;
   margin-bottom: 35px;
-  color: #EAEAEA; /* Light gray */
+  color: #EAEAEA !important;    /* Light gray */
 }
 
 /* Social Links */
 .social-links {
   display: flex;
   gap: 25px;
-  font-size: 22px; /* Bigger */
+  font-size: 24px !important;   /* Bigger */
   font-weight: bold;
 }
 
 .social-links a {
-  color: white;
+  color: white !important;
   text-decoration: none;
 }
 
 .social-links a:hover {
-  color: #FFD700; /* Gold hover */
+  color: #FFD700 !important;    /* Gold hover */
 }
+
 
 /* Image Content */
 .image-content img {
