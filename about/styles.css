@@ -61,7 +61,7 @@ body {
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* top-align */
   padding: 140px 80px 60px 80px; /* extra top padding for navbar */
 }
 
@@ -73,39 +73,39 @@ body {
 .about-content h1 {
   font-size: 48px;
   color: #F0F0E8;
-  margin-bottom: 15px;
+  margin-bottom: 25px; /* Increased gap */
 }
 
 .about-content .intro {
   font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 15px;
+  line-height: 1.7; /* Slightly more spacing between lines */
+  margin-bottom: 30px; /* Increased gap before academic section */
   color: #F0F0E8;
 }
 
 .about-content h2 {
-  font-size: 32px;
-  margin-bottom: 8px;
+  font-size: 36px; /* Slightly bigger */
+  margin-bottom: 15px; /* More spacing */
   color: #F0F0E8;
 }
 
 .academics p {
   font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 10px;
+  line-height: 1.6;
+  margin-bottom: 12px; /* Slightly bigger gap between academic points */
   color: #A3B5A9;
 }
 
 /* Buttons */
 .buttons {
-  margin-top: 25px;
+  margin-top: 35px; /* Increased gap from academic section */
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
 .btn {
   text-decoration: none;
-  padding: 12px 28px;
+  padding: 14px 32px; /* Slightly bigger buttons */
   background-color: #74B0AB;
   color: #1C2826;
   font-weight: bold;
