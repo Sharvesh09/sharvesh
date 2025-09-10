@@ -14,41 +14,49 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 /* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
-  background: rgba(0, 0, 0, 0.3); /* Semi-transparent bar */
+  padding: 20px 80px;
+  background-color: #44444E; /* Same as background */
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
-.navbar .logo a {
-  color: #FFD700; /* Gold logo */
-  font-size: 28px; /* Larger */
+/* Logo / Name */
+.navbar .logo {
+  font-size: 28px;
   font-weight: bold;
+  color: #FFD700; /* Gold highlight */
   text-decoration: none;
 }
 
-.nav-links {
+/* Navbar Links */
+.navbar ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: white;
+.navbar ul li a {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 500;
+  color: #EAEAEA; /* Light text */
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #FFD700; /* Gold hover effect */
+/* Hover effect */
+.navbar ul li a:hover {
+  color: #00CED1; /* Accent hover (turquoise) */
 }
 
 /* Landing Section */
