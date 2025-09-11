@@ -10,6 +10,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #1C2826;
   color: #F0F0E8;
+  overflow: hidden; /* avoid scrolling */
 }
 
 /* Navbar */
@@ -53,45 +54,79 @@ body {
 
 /* Hobbies Section */
 .hobbies {
-  padding: 120px 60px 40px;
+  padding: 120px 40px 40px;
   text-align: center;
 }
 
 .hobbies h1 {
   font-size: 42px;
-  color: #F0F0E8;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
-/* Masonry Grid */
-.masonry {
-  column-count: 3; /* number of columns */
-  column-gap: 20px;
+/* Carousel */
+.carousel-container {
+  position: relative;
+  max-width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
 .card {
+  flex: 0 0 250px;
+  margin: 0 15px;
   background-color: #2A3836;
-  display: inline-block;
-  margin: 0 0 20px;
   border-radius: 12px;
-  overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  overflow: hidden;
 }
 
-.card img {
-  width: 100%;
-  display: block;
+.img-placeholder {
+  background-color: #444;
+  color: #A3B5A9;
+  font-size: 18px;
+  font-weight: bold;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card p {
   padding: 15px;
-  font-size: 18px;
+  font-size: 16px;
   color: #F0F0E8;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.7);
+/* Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(116, 176, 171, 0.8);
+  border: none;
+  color: #1C2826;
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+  z-index: 10;
 }
 
+.prev:hover, .next:hover {
+  background-color: #74B0AB;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
