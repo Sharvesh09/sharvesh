@@ -1,4 +1,4 @@
-/* General Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,13 +7,13 @@
 
 /* Body */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   background-color: #1C2826;
   color: #F0F0E8;
-  height: 100vh; /* lock height */
-  overflow: hidden; /* no scrolling */
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 /* Navbar */
@@ -21,32 +21,31 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
+  padding: 20px 80px;
   background-color: #1C2826;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 
 .navbar .logo a {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
-  color: #74B0AB;
+  color: #F0F0E8;
   text-decoration: none;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 35px;
+  gap: 30px;
 }
 
 .navbar ul li a {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
   color: #F0F0E8;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -58,95 +57,64 @@ body {
 }
 
 /* About Section */
-.about-section {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center; /* center vertically */
-  padding: 100px 80px 40px 80px; /* space for navbar */
+.about {
+  padding: 140px 100px 60px 100px; /* more space under navbar */
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.8; /* increased spacing between lines */
 }
 
-.about-content {
-  max-width: 900px;
-  height: calc(100vh - 140px); /* fit within screen */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* distribute evenly */
-  animation: fadeIn 1s ease-in-out;
-}
-
-/* Headings */
-.about-content h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
+.about h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  text-align: left; /* Left aligned heading */
   color: #F0F0E8;
 }
 
-.about-content .intro {
+.about .intro {
   font-size: 18px;
-  line-height: 1.5;
-  color: #F0F0E8;
+  margin-bottom: 40px;
 }
 
-/* Academic Section */
+/* Academics */
 .academics h2 {
-  font-size: 32px;
-  margin-bottom: 12px;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #F0F0E8;
 }
 
 .academic-item {
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 15px;
+  gap: 20px;
+  margin-bottom: 18px;
 }
 
-.logo-box {
-  width: 55px;
-  height: 55px;
-  background-color: #2A3836;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 6px;
-  flex-shrink: 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-}
-
-.logo-box img {
-  max-width: 70%;
-  max-height: 70%;
-  object-fit: contain;
-}
-
-.academic-item p {
-  font-size: 16px;
-  color: #A3B5A9;
+.academic-logo {
+  width: 50px;
+  height: 50px;
+  background-color: #2A3836; /* placeholder square for logos */
+  border-radius: 8px;
 }
 
 /* Buttons */
 .buttons {
+  margin-top: 40px;
   display: flex;
   gap: 20px;
 }
 
 .btn {
-  text-decoration: none;
-  padding: 12px 28px;
+  display: inline-block;
+  padding: 12px 30px;
   background-color: #74B0AB;
   color: #1C2826;
   font-weight: bold;
-  border-radius: 6px;
-  transition: all 0.3s ease;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #F0F0E8;
-  color: #1C2826;
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  background-color: #5b928d;
 }
