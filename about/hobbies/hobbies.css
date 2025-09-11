@@ -6,43 +6,53 @@ body {
   color: #F0F0E8;
 }
 
-/* Navbar */
+/* Navbar (SAME as Landing/About) */
 .navbar {
   background-color: #1C2826;
-  padding: 15px 30px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  padding: 15px 40px;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
-.navbar ul {
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #74B0AB;
+}
+
+.nav-links {
   list-style: none;
   display: flex;
-  justify-content: center;
+  gap: 25px;
   margin: 0;
   padding: 0;
 }
 
-.navbar ul li {
-  margin: 0 15px;
-}
-
-.navbar ul li a {
+.nav-links li a {
   color: #F0F0E8;
   text-decoration: none;
   font-size: 1rem;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
-.navbar ul li a:hover,
-.navbar ul li a.active {
+.nav-links li a:hover,
+.nav-links li a.active {
   color: #74B0AB;
 }
 
 /* Hobbies Section */
 .hobbies {
   text-align: center;
-  padding: 40px 20px;
+  padding: 50px 20px;
 }
 
 .hobbies h1 {
@@ -88,3 +98,4 @@ body {
   font-size: 1.2rem;
   color: #F0F0E8;
 }
+
