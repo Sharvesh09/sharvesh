@@ -6,7 +6,7 @@ body {
   color: #F0F0E8;
 }
 
-/* Navbar (SAME as Landing/About) */
+/* Navbar (matches other pages) */
 .navbar {
   background-color: #1C2826;
   padding: 15px 40px;
@@ -23,10 +23,11 @@ body {
   margin: auto;
 }
 
-.logo {
+.logo a {
   font-size: 1.8rem;
   font-weight: bold;
   color: #74B0AB;
+  text-decoration: none;
 }
 
 .nav-links {
@@ -98,4 +99,3 @@ body {
   font-size: 1.2rem;
   color: #F0F0E8;
 }
-
