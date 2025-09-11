@@ -106,8 +106,8 @@ body {
 }
 
 .academic-logo {
-  width: 60px;   /* increased size */
-  height: 60px;  /* increased size */
+  width: 57.5px;   /* increased size */
+  height: 57.5px;  /* increased size */
   background-color: #2A3836; /* placeholder square */
   border-radius: 7px;
   flex-shrink: 0;
