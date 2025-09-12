@@ -8,7 +8,7 @@
 /* Body */
 body {
   font-family: Arial, sans-serif;
-  background-color: #1C2826; /* match landing/about */
+  background-color: #1C2826; /* same as landing/about */
   color: #F0F0E8;
   min-height: 100vh;
 }
@@ -47,7 +47,7 @@ body {
 
 .nav-links a:hover,
 .nav-links .active {
-  color: #74B0AB; /* accent color */
+  color: #74B0AB; /* accent */
 }
 
 /* Hobbies Section */
