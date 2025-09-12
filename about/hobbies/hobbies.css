@@ -1,14 +1,16 @@
-/* General Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body */
 body {
   font-family: Arial, sans-serif;
-  background-color: #1C2826; /* same as landing/about */
+  background-color: #1C2826; /* match landing/about */
   color: #F0F0E8;
+  min-height: 100vh;
 }
 
 /* Navbar */
@@ -21,6 +23,7 @@ body {
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 .logo a {
@@ -61,41 +64,23 @@ body {
 
 .hobby-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
 }
 
 .hobby-card {
   background-color: #2A3836;
-  padding: 1.5rem;
+  padding: 2rem;
   border-radius: 12px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #F0F0E8;
+  transition: transform 0.3s, background-color 0.3s;
+  cursor: default;
 }
 
 .hobby-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  transform: translateY(-8px);
+  background-color: #74B0AB;
+  color: #1C2826;
 }
-
-.hobby-card h2 {
-  margin: 1rem 0;
-  color: #74B0AB;
-}
-
-.hobby-card p {
-  color: #A3B5A9;
-}
-
-.photo-placeholder {
-  width: 100%;
-  height: 150px;
-  background-color: #1C2826;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #A3B5A9;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
-
