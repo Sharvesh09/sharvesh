@@ -5,16 +5,13 @@
   box-sizing: border-box;
 }
 
-/* Body Styling */
+/* Body */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #1C2826; /* Deep forest green */
-  color: #F0F0E8; /* Creamy white */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  color: #F0F0E8;
   min-height: 100vh;
-  overflow: hidden; /* Prevent scrolling */
+  overflow: hidden; /* prevent scrolling */
 }
 
 /* Navbar */
@@ -57,22 +54,22 @@ body {
 
 .nav-links a:hover,
 .nav-links .active {
-  color: #74B0AB; /* Teal accent */
+  color: #74B0AB;
 }
 
-/* About Section */
+/* About Section Layout */
 .about {
   margin-top: 120px; /* space below navbar */
-  text-align: left;
-  max-width: 1100px;
+  max-width: 1200px;
   width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
-/* About Text */
+/* About Me */
 .about-text h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -81,61 +78,74 @@ body {
 
 .about-text p {
   font-size: 1.1rem;
-  line-height: 1.8; /* increased line spacing */
+  line-height: 1.8;
+  max-width: 1000px;
   color: #F0F0E8;
 }
 
-/* Photo Section */
-.about-photo {
-  width: 220px;
-  height: 220px;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 2px solid #74B0AB;
-}
-
-.about-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* Academic + Photo Row */
+.academic-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
 /* Academic Section */
 .academic {
-  width: 100%;
+  flex: 2;
 }
 
 .academic h2 {
   font-size: 1.8rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   color: #F0F0E8;
 }
 
 .academic-grid {
   display: flex;
-  gap: 2rem;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .academic-card {
   background-color: #2A3836;
-  color: #F0F0E8;
   padding: 1rem;
   border-radius: 10px;
-  flex: 1;
-  text-align: center;
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-.academic-card::before {
-  content: "";
-  display: block;
-  width: 70px;   /* bigger square for logos */
-  height: 70px;
+.academic-card .logo-placeholder {
+  width: 80px;  /* bigger square */
+  height: 80px;
   background-color: #1C2826;
   border: 2px solid #74B0AB;
   border-radius: 8px;
-  margin: 0 auto 0.8rem auto;
+  flex-shrink: 0;
+}
+
+.academic-card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Photo */
+.about-photo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.about-photo img {
+  width: 250px;
+  height: 250px;
+  border-radius: 12px;
+  border: 2px solid #74B0AB;
+  object-fit: cover;
 }
 
 /* Buttons */
@@ -164,29 +174,7 @@ body {
   animation: fadeIn 1s ease forwards;
 }
 
-.slide-in {
-  opacity: 0;
-  animation: slideIn 1s ease forwards;
-  animation-delay: 0.3s;
-}
-
-.zoom-in {
-  opacity: 0;
-  animation: zoomIn 0.8s ease forwards;
-  animation-delay: 0.6s;
-}
-
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideIn {
-  from { opacity: 0; transform: translateX(50px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes zoomIn {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
 }
