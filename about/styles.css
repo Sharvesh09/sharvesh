@@ -1,18 +1,31 @@
-/* General Theme */
-body {
+/* General Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
   font-family: 'Poppins', sans-serif;
-  background-color: #1C2826;
-  color: #F0F0E8;
-  overflow: hidden; /* prevent scroll */
+  background-color: #1C2826; /* Deep forest green */
+  color: #F0F0E8; /* Creamy white */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden; /* Prevent scrolling */
 }
 
 /* Navbar */
 .navbar {
+  width: 100%;
   background-color: #1C2826;
-  padding: 15px 40px;
-  position: sticky;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  padding: 1rem 2rem;
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: 1000;
 }
 
@@ -20,127 +33,155 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: auto;
 }
 
 .logo a {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #74B0AB;
   text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #F0F0E8;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
+  gap: 1.5rem;
 }
 
-.nav-links li a {
-  color: #F0F0E8;
+.nav-links a {
   text-decoration: none;
-  font-size: 1rem;
+  color: #F0F0E8;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
-.nav-links li a:hover,
-.nav-links li a.active {
-  color: #74B0AB;
+.nav-links a:hover,
+.nav-links .active {
+  color: #74B0AB; /* Teal accent */
 }
 
 /* About Section */
 .about {
-  max-width: 1100px;
-  margin: 80px auto;
-  padding: 20px;
+  margin-top: 120px; /* space below navbar */
   text-align: left;
-  animation: fadeIn 1s ease forwards;
+  max-width: 1100px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
+/* About Text */
 .about-text h1 {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
   color: #F0F0E8;
 }
 
 .about-text p {
   font-size: 1.1rem;
-  line-height: 1.8;
+  line-height: 1.8; /* increased line spacing */
   color: #F0F0E8;
 }
 
-/* Academic + Photo Row */
-.about-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 40px;
-  gap: 40px;
+/* Photo Section */
+.about-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #74B0AB;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Academic Section */
+.academic {
+  width: 100%;
 }
 
 .academic h2 {
   font-size: 1.8rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.2rem;
   color: #F0F0E8;
 }
 
 .academic-grid {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  gap: 2rem;
+  justify-content: space-between;
 }
 
 .academic-card {
   background-color: #2A3836;
-  padding: 15px;
+  color: #F0F0E8;
+  padding: 1rem;
   border-radius: 10px;
-  font-size: 1rem;
-  color: #A3B5A9;
-  animation: zoomIn 0.8s ease forwards;
+  flex: 1;
+  text-align: center;
+  position: relative;
 }
 
-/* About Photo */
-.about-photo img {
-  width: 250px;
-  height: 250px;
-  border-radius: 15px;
-  object-fit: cover;
-  border: 3px solid #74B0AB;
-  animation: slideInRight 1s ease forwards;
+.academic-card::before {
+  content: "";
+  display: block;
+  width: 70px;   /* bigger square for logos */
+  height: 70px;
+  background-color: #1C2826;
+  border: 2px solid #74B0AB;
+  border-radius: 8px;
+  margin: 0 auto 0.8rem auto;
 }
 
 /* Buttons */
 .about-buttons {
-  margin-top: 40px;
   display: flex;
-  gap: 20px;
+  gap: 1.5rem;
 }
 
 .btn {
+  padding: 0.7rem 1.5rem;
   background-color: #74B0AB;
   color: #1C2826;
-  padding: 12px 24px;
-  border-radius: 8px;
   font-weight: bold;
+  border-radius: 8px;
   text-decoration: none;
-  transition: transform 0.3s, background-color 0.3s;
+  transition: background 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #5c8e8a;
-  transform: scale(1.05);
+  background-color: #5e9994;
 }
 
 /* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.slide-in {
+  opacity: 0;
+  animation: slideIn 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.zoom-in {
+  opacity: 0;
+  animation: zoomIn 0.8s ease forwards;
+  animation-delay: 0.6s;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes slideInRight {
+@keyframes slideIn {
   from { opacity: 0; transform: translateX(50px); }
   to { opacity: 1; transform: translateX(0); }
 }
