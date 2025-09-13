@@ -128,7 +128,7 @@ body {
   border-radius: 0;   /* no rounded frames */
   object-fit: contain;
   box-shadow: none;   /* no shadow/frame */
-  margin-top: -100px; /*  raise the image upward */
+  margin-top: -150px; /*  raise the image upward */
 }
 
 }
