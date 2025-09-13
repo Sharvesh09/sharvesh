@@ -120,13 +120,16 @@ body {
 /* ===============================
    Image Content
 ================================= */
+/* Image Content */
 .image-content img {
-  width: 360px;
-  height: 360px;
-  border-radius: 50%; /* Circle */
-  object-fit: cover;
-  border: 5px solid #74B0AB; /* Accent border */
-  background-color: #2A3836; /* Secondary background */
+  width: 400px;          /* adjust as needed */
+  height: auto;          /* keep natural aspect ratio */
+  border-radius: 12px;   /* small rounded corners for a modern look */
+  object-fit: cover;     /* ensures image doesn’t distort */
+  border: 4px solid #74B0AB; /* subtle accent border */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* nice shadow */
+}
+
 }
 /* Animation Keyframes */
 @keyframes fadeSlideUp {
