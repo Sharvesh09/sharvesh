@@ -1,55 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Skills | Sharvesh S</title>
   <link rel="stylesheet" href="skills.css">
 </head>
 <body>
-  <!-- Navbar -->
+
+  <!-- NAVBAR (same style/links as other pages) -->
   <nav class="navbar">
-    <ul>
+    <div class="logo">
+      <a href="../index.html">SHARVESH S</a>
+    </div>
+
+    <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../about/index.html">About</a></li>
-      <li><a href="../skills/index.html" class="active">Skills</a></li>
+      <li><a href="index.html" class="active">Skills</a></li>
       <li><a href="../projects/index.html">Projects</a></li>
       <li><a href="../hobbies/index.html">Hobbies</a></li>
       <li><a href="../contact/index.html">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Skills Section -->
+  <!-- SKILLS SECTION -->
   <section class="skills">
     <h1>My Skills</h1>
-    <div class="skills-grid">
-      
-      <div class="skill-card">
-        <h3>Programming & Development</h3>
-        <p>Python, HTML, CSS, Retrieval-Augmented Generation (RAG), Frontend Development</p>
-      </div>
 
-      <div class="skill-card">
-        <h3>Embedded Systems</h3>
-        <p>Arduino, Raspberry Pi, ESP32</p>
-      </div>
+    <h2>Programming & Development</h2>
+    <div class="skill-grid">
+      <div class="skill-card"><div class="skill-img"></div><p>Python</p></div>
+      <div class="skill-card"><div class="skill-img"></div><p>HTML</p></div>
+      <div class="skill-card"><div class="skill-img"></div><p>CSS</p></div>
+      <div class="skill-card"><div class="skill-img"></div><p>Frontend Development (HTML)</p></div>
+      <div class="skill-card"><div class="skill-img"></div><p>Retrieval-Augmented Generation (RAG)</p></div>
+    </div>
 
-      <div class="skill-card">
-        <h3>CAD & Design Tools</h3>
-        <p>AutoCAD, SketchUp, OrCAD, KiCad</p>
-      </div>
+    <h2>Embedded Systems & PCB Design</h2>
+    <div class="skill-grid">
+      <div class="skill-card"><div class="skill-img"></div><p>Arduino</p></div>
+      <div class="skill-card"><div class="skill-img"></div><p>Raspberry Pi</p></div>
+      <div class="skill-card"><div class="skill-img"></div><p>ESP32</p></div>
+      <div class="skill-card"><div class="skill-img"></div><p>OrCAD</p></div>
+      <div class="skill-card"><div class="skill-img"></div><p>KiCad</p></div>
+    </div>
 
-      <div class="skill-card">
-        <h3>Version Control</h3>
-        <p>GitHub</p>
-      </div>
+    <h2>Design & CAD Tools</h2>
+    <div class="skill-grid">
+      <div class="skill-card"><div class="skill-img"></div><p>AutoCAD</p></div>
+      <div class="skill-card"><div class="skill-img"></div><p>SketchUp</p></div>
+      <div class="skill-card"><div class="skill-img"></div><p>Canva</p></div>
+    </div>
 
-      <div class="skill-card">
-        <h3>Creative Tools</h3>
-        <p>Canva</p>
-      </div>
-
+    <h2>Version Control & Collaboration</h2>
+    <div class="skill-grid">
+      <div class="skill-card"><div class="skill-img"></div><p>GitHub</p></div>
     </div>
   </section>
+
 </body>
 </html>
