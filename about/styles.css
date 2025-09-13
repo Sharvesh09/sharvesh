@@ -173,13 +173,14 @@ body {
   animation-delay: 0.5s;
 }
 
-.about-right img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 4px solid #74B0AB;
-}
+/* Image Content */
+.image-content img {
+  width: 450px;       /* adjust based on your image */
+  height: auto;
+  border-radius: 0;   /* no rounded frames */
+  object-fit: contain;
+  box-shadow: none;   /* no shadow/frame */
+  margin-top: -200px; /*  raise the image upward */
 
 /* Animations */
 @keyframes slideInLeft {
