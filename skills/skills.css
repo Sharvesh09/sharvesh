@@ -1,58 +1,134 @@
-/* General Theme */
+/* === Reset / base === */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+
+/* === Theme === */
 body {
-  margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #1C2826; /* same as landing page */
+  background-color: #1C2826; /* same as landing/about */
   color: #F0F0E8;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  min-height: 100vh;
 }
 
-/* Navbar is inherited from your main styles.css, 
-   so no need to redefine it here. */
+/* === NAVBAR (matches other pages) === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;            /* adjust spacing to match other pages */
+  background-color: #1C2826;
+  position: fixed;               /* keep at top like your other pages */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
 
-/* Skills Section */
+.logo a {
+  color: #F0F0E8;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #F0F0E8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.98rem;
+  transition: color .2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #74B0AB; /* accent */
+}
+
+/* === SKILLS SECTION === */
+/* Add top padding so content isn't hidden behind fixed navbar */
 .skills {
+  padding: 120px 28px 60px; /* top padding accounts for navbar height */
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
-  padding: 50px 20px;
 }
 
+/* Heading styles */
 .skills h1 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+  font-size: 2.6rem;
+  margin-bottom: 34px;
   color: #F0F0E8;
 }
 
-/* Skills Grid */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  max-width: 1100px;
-  margin: 0 auto;
+.skills h2 {
+  font-size: 1.3rem;
+  margin: 34px 0 18px;
+  color: #74B0AB;
+  text-align: left;       /* left align category headings for a cleaner look */
 }
 
-/* Skill Card */
+/* Grid of skill cards */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+  margin-bottom: 8px;
+}
+
+/* Individual skill card */
 .skill-card {
   background-color: #2A3836;
-  border-radius: 15px;
-  padding: 25px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 12px;
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: transform .28s ease, box-shadow .28s ease, background-color .28s ease;
+  cursor: default;
 }
 
+/* hover */
 .skill-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+  background-color: #324945;
 }
 
-.skill-card h3 {
-  margin-bottom: 15px;
-  font-size: 1.4rem;
-  color: #74B0AB;
+/* placeholder square for icon/logo */
+.skill-img {
+  width: 72px;
+  height: 72px;
+  background: #444;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
 }
 
+/* skill label */
 .skill-card p {
-  margin: 0;
-  font-size: 1rem;
   color: #F0F0E8;
-  line-height: 1.5;
+  font-size: 0.98rem;
+  margin: 0;
+  text-align: center;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+/* small screens: tighten spacing a bit */
+@media (max-width: 600px) {
+  .navbar { padding: 14px 18px; }
+  .skills { padding-top: 100px; }
+  .skills h1 { font-size: 2rem; }
+  .skill-img { width: 64px; height: 64px; }
 }
