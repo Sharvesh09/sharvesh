@@ -90,12 +90,13 @@ body {
 .hobby-img {
   width: 100%;
   height: 150px;
-  background-color: #444;
+  object-fit: cover;   /* keeps proportions without stretching */
   border-radius: 10px;
   margin-bottom: 15px;
-  background-size: cover;
-  background-position: center;
+  display: block;
 }
+
+
 
 .hobby-card h3 {
   margin: 0;
