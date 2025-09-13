@@ -161,17 +161,7 @@ body {
   background-color: #5a8e89;
 }
 
-/* Right Section (Photo) */
-.about-right {
-  flex: 0 0 35%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  opacity: 0;
-  transform: translateX(50px);
-  animation: slideInRight 1s ease forwards;
-  animation-delay: 0.5s;
-}
+
 
 /* Image Content */
 .image-content img {
@@ -181,7 +171,7 @@ body {
   object-fit: contain;
   box-shadow: none;   /* no shadow/frame */
   margin-top: -200px; /*  raise the image upward */
-
+}
 /* Animations */
 @keyframes slideInLeft {
   to {
