@@ -170,7 +170,7 @@ body {
   border-radius: 0;   /* no rounded frames */
   object-fit: contain;
   box-shadow: none;   /* no shadow/frame */
-  margin-top: -200px; /*  raise the image upward */
+  margin-top: -400px; /*  raise the image upward */
 }
 /* Animations */
 @keyframes slideInLeft {
