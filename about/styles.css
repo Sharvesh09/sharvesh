@@ -13,7 +13,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  /* overflow: hidden; removed to allow scrolling */
+  overflow: hidden; /* Prevent scrolling */
 }
 
 /* Navbar */
@@ -62,8 +62,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 120px 80px 40px 80px;
-  gap: 40px;
+  padding: 120px 40px 40px 40px; /* reduced padding for fitting */
+  gap: 20px;
 }
 
 /* Left Section */
@@ -76,21 +76,21 @@ body {
 }
 
 .about-left h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 32px;
+  margin-bottom: 15px;
   color: #F0F0E8;
 }
 
 .about-left p {
-  font-size: 16px;
-  line-height: 1.8;
-  margin-bottom: 30px;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 20px;
   text-align: justify;
 }
 
 .about-left h2 {
-  font-size: 24px;
-  margin-bottom: 15px;
+  font-size: 22px;
+  margin-bottom: 10px;
   color: #F0F0E8;
 }
 
@@ -98,17 +98,17 @@ body {
 .academic-grid {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-bottom: 15px; /* Reduced to make space for scroll icon */
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .academic-card {
   background-color: #2A3836;
-  padding: 12px 16px;
+  padding: 10px 12px;
   border-radius: 8px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   opacity: 0;
   transform: scale(0.8);
   animation: zoomIn 0.6s ease forwards;
@@ -120,18 +120,18 @@ body {
 
 .academic-card p {
   margin: 0;
-  font-size: 15px;
+  font-size: 14px;
   color: #F0F0E8;
 }
 
 .academic-card span {
-  font-size: 14px;
+  font-size: 12px;
   color: #A3B5A9;
 }
 
 .logo-space {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: #444;
   border-radius: 6px;
 }
@@ -143,36 +143,26 @@ body {
   border-radius: 6px;
 }
 
-/* Scroll Icon */
-.scroll-icon {
-  font-size: 32px;
-  color: #74B0AB;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0; /* spacing between SRM card and buttons */
-  animation: bounce 1.5s infinite;
-}
-
 /* Buttons */
 .btn-group {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(10px);
   animation: fadeUp 1s ease forwards;
   animation-delay: 1.2s;
 }
 
 .btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 8px 18px;
   background-color: #74B0AB;
   color: #1C2826;
   font-weight: bold;
   text-decoration: none;
   border-radius: 6px;
   transition: background 0.3s ease;
+  font-size: 14px;
 }
 
 .btn:hover {
@@ -192,7 +182,7 @@ body {
 }
 
 .image-content img {
-  width: 450px;
+  width: 350px; /* reduced size to fit the page */
   height: auto;
   border-radius: 0;
   object-fit: contain;
@@ -227,10 +217,3 @@ body {
     transform: translateY(0);
   }
 }
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-  40% { transform: translateY(-10px); }
-  60% { transform: translateY(-5px); }
-}
-
