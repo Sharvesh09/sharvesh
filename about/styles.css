@@ -135,6 +135,15 @@ body {
   border-radius: 6px;
 }
 
+/* Scroll Arrow */
+.scroll-arrow {
+  text-align: center;
+  font-size: 24px;
+  color: #74B0AB;
+  margin: 10px 0;
+  animation: bounce 1.5s infinite;
+}
+
 /* Buttons */
 .btn-group {
   display: flex;
@@ -180,45 +189,7 @@ body {
   box-shadow: none;
 }
 
-/* Scroll Hint */
-.scroll-hint {
-  position: absolute;
-  bottom: 0px; 
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  font-size: 16px;
-  color: #74B0AB;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.scroll-hint .arrow {
-  font-size: 24px;
-  display: block;
-  margin-top: 5px;
-  animation: bounce 1.5s infinite;
-  color: #F0F0E8;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(8px); }
-}
-
 /* Animations */
-@keyframes slideInLeft {
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes slideInRight {
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes zoomIn {
-  to { opacity: 1; transform: scale(1); }
-}
-
-@keyframes fadeUp {
-  to { opacity: 1; transform: translateY(0); }
-}
+@keyframes slideInLeft { to { opacity: 1; transform: translateX(0); } }
+@keyframes slideInRight { to { opacity: 1; transform: translateX(0); } }
+@keyframes zoomIn { to {
