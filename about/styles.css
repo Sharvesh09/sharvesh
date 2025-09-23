@@ -19,7 +19,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 80px;
+  padding: 20px 60px;
   background-color: #1C2826;
   position: fixed;
   top: 0;
@@ -30,7 +30,7 @@ body {
 }
 
 .navbar .logo a {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   color: #F0F0E8;
   text-decoration: none;
@@ -39,11 +39,11 @@ body {
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 25px;
 }
 
 .navbar ul li a {
-  font-size: 16px;
+  font-size: 15px;
   color: #F0F0E8;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -59,8 +59,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 120px 40px 40px 40px;
-  gap: 30px;
+  padding: 100px 40px 40px 40px;
+  gap: 25px;
+  min-height: calc(100vh - 80px); /* full page minus navbar */
 }
 
 /* Left Column */
@@ -70,21 +71,21 @@ body {
 }
 
 .about-left h1 {
-  font-size: 36px;  /* reduced */
-  margin-bottom: 20px;
+  font-size: 32px;
+  margin-bottom: 18px;
   color: #F0F0E8;
 }
 
 .about-left p {
-  font-size: 16px;  /* reduced */
-  line-height: 1.6;
-  margin-bottom: 25px;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 20px;
   text-align: justify;
 }
 
 .about-left h2 {
-  font-size: 24px;
-  margin-bottom: 12px;
+  font-size: 22px;
+  margin-bottom: 10px;
   color: #F0F0E8;
 }
 
@@ -92,33 +93,33 @@ body {
 .academic-grid {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 10px;
+  margin-bottom: 18px;
 }
 
 .academic-card {
   background-color: #2A3836;
-  padding: 10px 14px;
+  padding: 10px 12px;
   border-radius: 8px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .academic-card p {
   margin: 0;
-  font-size: 15px;
+  font-size: 14px;
   color: #F0F0E8;
 }
 
 .academic-card span {
-  font-size: 13px;
+  font-size: 12px;
   color: #A3B5A9;
 }
 
 .logo-space {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
 }
 
 .logo-space img {
@@ -131,19 +132,19 @@ body {
 /* Buttons */
 .btn-group {
   display: flex;
-  gap: 18px;
+  gap: 15px;
 }
 
 .btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 9px 18px;
   background-color: #74B0AB;
   color: #1C2826;
   font-weight: bold;
   text-decoration: none;
   border-radius: 6px;
   transition: background 0.3s ease;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .btn:hover {
@@ -155,11 +156,11 @@ body {
   flex: 0 0 35%;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;  /* anchors at bottom */
+  align-items: flex-end;  /* anchors image at bottom */
 }
 
 .image-content img {
-  width: 300px;  /* reduced to fit page */
+  width: 280px;  /* adjusted to fit perfectly */
   height: auto;
   border-radius: 0;
   object-fit: contain;
