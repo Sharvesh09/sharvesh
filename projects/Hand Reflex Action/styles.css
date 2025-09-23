@@ -1,4 +1,4 @@
-/* General Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -50,86 +50,64 @@ body {
   color: #74B0AB;
 }
 
-/* Project Section */
-.project-container {
-  padding: 120px 80px 80px 80px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.project-container h1 {
-  font-size: 36px;
-  margin-bottom: 40px;
-  text-align: center;
-  color: #F0F0E8;
-}
-
-/* Project Card */
-.project-card {
+/* Project Detail Section */
+.project-detail {
   display: flex;
+  justify-content: space-between;
+  padding: 140px 80px 80px 80px;
   gap: 40px;
-  background-color: #2A3836;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   flex-wrap: wrap;
 }
 
+/* Text */
+.project-text {
+  flex: 1 1 50%;
+  min-width: 300px;
+}
+
+.project-text h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.project-text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Images */
 .project-images {
-  flex: 1;
+  flex: 1 1 45%;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  justify-content: center;
   align-items: center;
+  min-width: 250px;
 }
 
 .project-images img {
   width: 100%;
-  max-width: 500px;
   border-radius: 10px;
   object-fit: cover;
-}
-
-.project-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.project-content p {
-  font-size: 16px;
-  text-align: justify;
-  color: #F0F0E8;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 25px;
-  background-color: #74B0AB;
-  color: #1C2826;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 6px;
-  width: fit-content;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background-color: #5a8e89;
+  max-height: 350px;
 }
 
 /* Responsive */
 @media screen and (max-width: 900px) {
-  .project-card {
+  .project-detail {
     flex-direction: column;
-    align-items: center;
+    padding: 140px 20px 20px 20px;
   }
+
+  .project-images {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .project-images img {
-    max-width: 90%;
-  }
-  .project-content p {
-    font-size: 15px;
+    max-width: 45%;
+    max-height: 250px;
   }
 }
