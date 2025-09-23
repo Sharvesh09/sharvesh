@@ -62,7 +62,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 120px 40px 40px 40px; /* reduced padding for fitting */
+  padding: 120px 40px 40px 40px; /* padding adjusted to fit content */
   gap: 20px;
 }
 
@@ -173,7 +173,7 @@ body {
 .about-right {
   flex: 0 0 35%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end; /* keeps image on side */
   align-items: flex-start;
   opacity: 0;
   transform: translateX(50px);
@@ -182,7 +182,7 @@ body {
 }
 
 .image-content img {
-  width: 350px; /* reduced size to fit the page */
+  width: 300px; /* reduced width to fit inside page */
   height: auto;
   border-radius: 0;
   object-fit: contain;
