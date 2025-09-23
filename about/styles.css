@@ -10,8 +10,10 @@ body {
   font-family: Arial, sans-serif;
   background-color: #1C2826;
   color: #F0F0E8;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden; /* prevent scroll */
 }
 
 /* Navbar */
@@ -19,7 +21,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
+  padding: 15px 60px;
   background-color: #1C2826;
   position: fixed;
   top: 0;
@@ -58,48 +60,47 @@ body {
 .about {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 100px 40px 40px 40px;
-  gap: 25px;
-  min-height: calc(100vh - 80px); /* full page minus navbar */
+  align-items: flex-end; /* aligns profile image bottom right */
+  padding: 100px 50px 40px 50px; /* adjust top padding to account for navbar */
+  height: calc(100vh - 70px); /* full height minus navbar */
 }
 
 /* Left Column */
 .about-left {
   flex: 1;
   max-width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* evenly distribute content vertically */
+  height: 100%;
 }
 
 .about-left h1 {
-  font-size: 32px;
-  margin-bottom: 18px;
-  color: #F0F0E8;
+  font-size: 30px;
+  margin-bottom: 15px;
 }
 
 .about-left p {
   font-size: 15px;
-  line-height: 1.5;
+  line-height: 1.6;
   margin-bottom: 20px;
-  text-align: justify;
 }
 
 .about-left h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
-  color: #F0F0E8;
+  font-size: 20px;
+  margin-bottom: 8px;
 }
 
 /* Academic Details */
 .academic-grid {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 18px;
+  gap: 8px;
 }
 
 .academic-card {
   background-color: #2A3836;
-  padding: 10px 12px;
+  padding: 8px 12px;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -108,8 +109,7 @@ body {
 
 .academic-card p {
   margin: 0;
-  font-size: 14px;
-  color: #F0F0E8;
+  font-size: 13px;
 }
 
 .academic-card span {
@@ -118,8 +118,8 @@ body {
 }
 
 .logo-space {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
 }
 
 .logo-space img {
@@ -132,37 +132,36 @@ body {
 /* Buttons */
 .btn-group {
   display: flex;
-  gap: 15px;
+  gap: 12px;
 }
 
 .btn {
   display: inline-block;
-  padding: 9px 18px;
+  padding: 8px 16px;
   background-color: #74B0AB;
   color: #1C2826;
   font-weight: bold;
   text-decoration: none;
   border-radius: 6px;
-  transition: background 0.3s ease;
   font-size: 14px;
+  transition: background 0.3s ease;
 }
 
 .btn:hover {
   background-color: #5a8e89;
 }
 
-/* Right Column (Photo) */
+/* Right Column (Profile Photo) */
 .about-right {
   flex: 0 0 35%;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;  /* anchors image at bottom */
+  align-items: flex-end; /* bottom right */
 }
 
 .image-content img {
-  width: 280px;  /* adjusted to fit perfectly */
+  width: 300px; /* slightly bigger */
   height: auto;
-  border-radius: 0;
   object-fit: contain;
-  box-shadow: none;
+  border-radius: 0;
 }
