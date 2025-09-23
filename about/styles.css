@@ -60,7 +60,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   padding: 120px 40px 40px 40px;
-  gap: 40px;
+  gap: 30px;
 }
 
 /* Left Column */
@@ -70,21 +70,21 @@ body {
 }
 
 .about-left h1 {
-  font-size: 44px;  /* slightly bigger */
-  margin-bottom: 22px;
+  font-size: 36px;  /* reduced */
+  margin-bottom: 20px;
   color: #F0F0E8;
 }
 
 .about-left p {
-  font-size: 18px;  /* slightly bigger */
-  line-height: 1.7;
-  margin-bottom: 28px;
+  font-size: 16px;  /* reduced */
+  line-height: 1.6;
+  margin-bottom: 25px;
   text-align: justify;
 }
 
 .about-left h2 {
-  font-size: 28px;  /* slightly bigger */
-  margin-bottom: 15px;
+  font-size: 24px;
+  margin-bottom: 12px;
   color: #F0F0E8;
 }
 
@@ -92,33 +92,33 @@ body {
 .academic-grid {
   display: flex;
   flex-direction: column;
-  gap: 15px;  /* more spacing */
-  margin-bottom: 28px;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .academic-card {
   background-color: #2A3836;
-  padding: 14px 18px;  /* slightly bigger */
+  padding: 10px 14px;
   border-radius: 8px;
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
 .academic-card p {
   margin: 0;
-  font-size: 17px;  /* bigger */
+  font-size: 15px;
   color: #F0F0E8;
 }
 
 .academic-card span {
-  font-size: 15px;  /* bigger */
+  font-size: 13px;
   color: #A3B5A9;
 }
 
 .logo-space {
-  width: 55px;  /* bigger */
-  height: 55px;
+  width: 45px;
+  height: 45px;
 }
 
 .logo-space img {
@@ -131,19 +131,19 @@ body {
 /* Buttons */
 .btn-group {
   display: flex;
-  gap: 22px;  /* slightly more gap */
+  gap: 18px;
 }
 
 .btn {
   display: inline-block;
-  padding: 12px 24px;  /* slightly bigger */
+  padding: 10px 20px;
   background-color: #74B0AB;
   color: #1C2826;
   font-weight: bold;
   text-decoration: none;
   border-radius: 6px;
   transition: background 0.3s ease;
-  font-size: 16px;  /* bigger font */
+  font-size: 15px;
 }
 
 .btn:hover {
@@ -155,11 +155,11 @@ body {
   flex: 0 0 35%;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: flex-end;  /* anchors at bottom */
 }
 
 .image-content img {
-  width: 350px;  /* bigger than before */
+  width: 300px;  /* reduced to fit page */
   height: auto;
   border-radius: 0;
   object-fit: contain;
