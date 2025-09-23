@@ -13,7 +13,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* prevent scroll */
+  overflow: hidden;
 }
 
 /* Navbar */
@@ -32,7 +32,7 @@ body {
 }
 
 .navbar .logo a {
-  font-size: 22px;
+  font-size: 24px; /* increased slightly */
   font-weight: bold;
   color: #F0F0E8;
   text-decoration: none;
@@ -45,7 +45,7 @@ body {
 }
 
 .navbar ul li a {
-  font-size: 15px;
+  font-size: 16px; /* slightly bigger */
   color: #F0F0E8;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -60,9 +60,9 @@ body {
 .about {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end; /* profile photo at bottom right */
+  align-items: flex-end;
   padding: 90px 50px 40px 50px;
-  height: calc(100vh - 70px); /* full height minus navbar */
+  height: calc(100vh - 70px);
 }
 
 /* Left Column */
@@ -71,55 +71,55 @@ body {
   max-width: 55%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* vertical spacing */
+  justify-content: space-between;
   height: 100%;
 }
 
 .about-left h1 {
-  font-size: 36px;
+  font-size: 40px; /* increased */
   margin-bottom: 15px;
 }
 
 .about-left p {
-  font-size: 18px; /* increased size */
+  font-size: 20px; /* increased */
   line-height: 1.7;
   margin-bottom: 20px;
 }
 
 .about-left h2 {
-  font-size: 22px;
-  margin-bottom: 8px;
+  font-size: 24px; /* increased */
+  margin-bottom: 10px;
 }
 
 /* Academic Details */
 .academic-grid {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px; /* slightly bigger */
 }
 
 .academic-card {
   background-color: #2A3836;
-  padding: 12px 16px;
+  padding: 14px 18px; /* increased */
   border-radius: 8px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px; /* increased */
 }
 
 .academic-card p {
   margin: 0;
-  font-size: 16px; /* slightly bigger */
+  font-size: 17px; /* slightly bigger */
 }
 
 .academic-card span {
-  font-size: 14px;
+  font-size: 15px;
   color: #A3B5A9;
 }
 
 .logo-space {
-  width: 45px;
-  height: 45px;
+  width: 50px; /* increased */
+  height: 50px; /* increased */
 }
 
 .logo-space img {
@@ -132,19 +132,19 @@ body {
 /* Buttons */
 .btn-group {
   display: flex;
-  gap: 12px;
-  margin-top: 10px;
+  gap: 15px; /* slightly bigger */
+  margin-top: 15px;
 }
 
 .btn {
   display: inline-block;
-  padding: 10px 18px; /* slightly bigger */
+  padding: 12px 22px; /* slightly bigger */
   background-color: #74B0AB;
   color: #1C2826;
   font-weight: bold;
   text-decoration: none;
   border-radius: 6px;
-  font-size: 15px;
+  font-size: 16px; /* increased */
   transition: background 0.3s ease;
 }
 
@@ -154,14 +154,14 @@ body {
 
 /* Right Column (Profile Photo) */
 .about-right {
-  flex: 0 0 38%; /* slightly bigger for photo */
+  flex: 0 0 38%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
 
 .image-content img {
-  width: 300px; /* increased size */
+  width: 350px; /* increased */
   height: auto;
   object-fit: contain;
   border-radius: 0;
