@@ -13,7 +13,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* fits all content inside viewport */
+  overflow: hidden; /* prevent scroll */
 }
 
 /* Navbar */
@@ -61,7 +61,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end; /* profile photo at bottom right */
-  padding: 100px 50px 40px 50px;
+  padding: 90px 50px 40px 50px;
   height: calc(100vh - 70px); /* full height minus navbar */
 }
 
@@ -76,18 +76,18 @@ body {
 }
 
 .about-left h1 {
-  font-size: 32px;
+  font-size: 36px;
   margin-bottom: 15px;
 }
 
 .about-left p {
-  font-size: 16px;
+  font-size: 18px; /* increased size */
   line-height: 1.7;
   margin-bottom: 20px;
 }
 
 .about-left h2 {
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 8px;
 }
 
@@ -95,12 +95,12 @@ body {
 .academic-grid {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .academic-card {
   background-color: #2A3836;
-  padding: 10px 14px;
+  padding: 12px 16px;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -109,17 +109,17 @@ body {
 
 .academic-card p {
   margin: 0;
-  font-size: 14px;
+  font-size: 16px; /* slightly bigger */
 }
 
 .academic-card span {
-  font-size: 13px;
+  font-size: 14px;
   color: #A3B5A9;
 }
 
 .logo-space {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
 }
 
 .logo-space img {
@@ -138,13 +138,13 @@ body {
 
 .btn {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 10px 18px; /* slightly bigger */
   background-color: #74B0AB;
   color: #1C2826;
   font-weight: bold;
   text-decoration: none;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 15px;
   transition: background 0.3s ease;
 }
 
@@ -154,14 +154,14 @@ body {
 
 /* Right Column (Profile Photo) */
 .about-right {
-  flex: 0 0 35%;
+  flex: 0 0 38%; /* slightly bigger for photo */
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
 
 .image-content img {
-  width: 280px; /* adjust to fit perfectly */
+  width: 300px; /* increased size */
   height: auto;
   object-fit: contain;
   border-radius: 0;
