@@ -10,9 +10,8 @@ body {
   font-family: Arial, sans-serif;
   background-color: #1C2826;
   color: #F0F0E8;
-  margin: 0;
-  padding: 0;
-  overflow-y: auto; /* Enable scrolling */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Navbar */
@@ -57,17 +56,22 @@ body {
 
 /* About Section */
 .about {
+  flex: 1;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 120px 80px 80px 80px;
   gap: 40px;
+  position: relative;
 }
 
 /* Left Section */
 .about-left {
   flex: 1;
   max-width: 55%;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 1s ease forwards;
 }
 
 .about-left h1 {
@@ -104,7 +108,14 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: zoomIn 0.6s ease forwards;
 }
+
+.academic-card:nth-child(1) { animation-delay: 0.3s; }
+.academic-card:nth-child(2) { animation-delay: 0.6s; }
+.academic-card:nth-child(3) { animation-delay: 0.9s; }
 
 .academic-card p {
   margin: 0;
@@ -120,15 +131,18 @@ body {
 .academic-logo {
   width: 50px;
   height: 50px;
+  object-fit: contain;
   border-radius: 6px;
-  object-fit: cover;
 }
 
 /* Buttons */
 .btn-group {
   display: flex;
   gap: 20px;
-  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 1.2s;
 }
 
 .btn {
@@ -152,6 +166,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight 1s ease forwards;
+  animation-delay: 0.5s;
 }
 
 .image-content img {
@@ -164,12 +182,15 @@ body {
 
 /* Scroll Hint */
 .scroll-hint {
-  width: 100%;
+  position: absolute;
+  bottom: 0px; 
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
   font-size: 16px;
   color: #74B0AB;
   font-weight: bold;
-  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .scroll-hint .arrow {
@@ -183,4 +204,21 @@ body {
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(8px); }
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
 }
