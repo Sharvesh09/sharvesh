@@ -60,7 +60,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   padding: 120px 40px 40px 40px;
-  gap: 30px;
+  gap: 40px;
 }
 
 /* Left Column */
@@ -70,21 +70,21 @@ body {
 }
 
 .about-left h1 {
-  font-size: 40px;  /* Increased from 32px */
-  margin-bottom: 20px;
+  font-size: 44px;  /* slightly bigger */
+  margin-bottom: 22px;
   color: #F0F0E8;
 }
 
 .about-left p {
-  font-size: 17px;  /* Increased from 15px */
-  line-height: 1.6; /* Slightly more spacing */
-  margin-bottom: 25px;
+  font-size: 18px;  /* slightly bigger */
+  line-height: 1.7;
+  margin-bottom: 28px;
   text-align: justify;
 }
 
 .about-left h2 {
-  font-size: 26px;  /* Increased from 22px */
-  margin-bottom: 12px;
+  font-size: 28px;  /* slightly bigger */
+  margin-bottom: 15px;
   color: #F0F0E8;
 }
 
@@ -92,33 +92,33 @@ body {
 .academic-grid {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 25px;
+  gap: 15px;  /* more spacing */
+  margin-bottom: 28px;
 }
 
 .academic-card {
   background-color: #2A3836;
-  padding: 12px 16px;
+  padding: 14px 18px;  /* slightly bigger */
   border-radius: 8px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
 .academic-card p {
   margin: 0;
-  font-size: 16px;  /* Increased from 14px */
+  font-size: 17px;  /* bigger */
   color: #F0F0E8;
 }
 
 .academic-card span {
-  font-size: 14px;  /* Increased from 12px */
+  font-size: 15px;  /* bigger */
   color: #A3B5A9;
 }
 
 .logo-space {
-  width: 50px;  /* Slightly larger */
-  height: 50px;
+  width: 55px;  /* bigger */
+  height: 55px;
 }
 
 .logo-space img {
@@ -131,19 +131,19 @@ body {
 /* Buttons */
 .btn-group {
   display: flex;
-  gap: 20px;
+  gap: 22px;  /* slightly more gap */
 }
 
 .btn {
   display: inline-block;
-  padding: 10px 22px; /* Slightly bigger */
+  padding: 12px 24px;  /* slightly bigger */
   background-color: #74B0AB;
   color: #1C2826;
   font-weight: bold;
   text-decoration: none;
   border-radius: 6px;
   transition: background 0.3s ease;
-  font-size: 15px; /* Increased from 14px */
+  font-size: 16px;  /* bigger font */
 }
 
 .btn:hover {
@@ -159,7 +159,7 @@ body {
 }
 
 .image-content img {
-  width: 300px;  /* Keep original size */
+  width: 350px;  /* bigger than before */
   height: auto;
   border-radius: 0;
   object-fit: contain;
