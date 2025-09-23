@@ -6,15 +6,14 @@
 }
 
 /* Body */
-/* Body */
 body {
   font-family: Arial, sans-serif;
   background-color: #1C2826; /* Same as landing page */
   color: #F0F0E8;
-  height: 100vh;
+  /* Removed height: 100vh to allow scrolling */
   display: flex;
   flex-direction: column;
-  /* overflow: hidden;  <-- remove or comment this line */
+  /* overflow: hidden;  <-- keep removed to enable scroll */
 }
 
 /* Navbar */
