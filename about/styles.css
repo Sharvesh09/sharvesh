@@ -60,9 +60,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 120px 80px 80px 80px;
+  padding: 120px 80px 40px 80px;
   gap: 40px;
-  position: relative;
 }
 
 /* Left Section */
@@ -98,7 +97,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
 
 .academic-card {
@@ -128,68 +127,7 @@ body {
   color: #A3B5A9;
 }
 
-.academic-logo {
+.logo-space {
   width: 50px;
   height: 50px;
-  object-fit: contain;
-  border-radius: 6px;
 }
-
-/* Scroll Arrow */
-.scroll-arrow {
-  text-align: center;
-  font-size: 24px;
-  color: #74B0AB;
-  margin: 10px 0;
-  animation: bounce 1.5s infinite;
-}
-
-/* Buttons */
-.btn-group {
-  display: flex;
-  gap: 20px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 1s ease forwards;
-  animation-delay: 1.2s;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #74B0AB;
-  color: #1C2826;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #5a8e89;
-}
-
-/* Right Section (Photo) */
-.about-right {
-  flex: 0 0 35%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  opacity: 0;
-  transform: translateX(50px);
-  animation: slideInRight 1s ease forwards;
-  animation-delay: 0.5s;
-}
-
-.image-content img {
-  width: 450px;
-  height: auto;
-  border-radius: 0;
-  object-fit: contain;
-  box-shadow: none;
-}
-
-/* Animations */
-@keyframes slideInLeft { to { opacity: 1; transform: translateX(0); } }
-@keyframes slideInRight { to { opacity: 1; transform: translateX(0); } }
-@keyframes zoomIn { to {
