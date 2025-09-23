@@ -8,12 +8,12 @@
 /* Body */
 body {
   font-family: Arial, sans-serif;
-  background-color: #1C2826; /* Same as landing page */
+  background-color: #1C2826;
   color: #F0F0E8;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Prevent scrolling */
+  overflow: hidden; /* no scrolling */
 }
 
 /* Navbar */
@@ -62,11 +62,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 120px 40px 40px 40px; /* padding adjusted to fit content */
+  padding: 120px 40px 40px 40px;
   gap: 20px;
 }
 
-/* Left Section */
+/* Left Column */
 .about-left {
   flex: 1;
   max-width: 55%;
@@ -169,11 +169,11 @@ body {
   background-color: #5a8e89;
 }
 
-/* Right Section (Photo) */
+/* Right Column (Photo) */
 .about-right {
   flex: 0 0 35%;
   display: flex;
-  justify-content: flex-end; /* keeps image on side */
+  justify-content: flex-end; /* keep photo on right */
   align-items: flex-start;
   opacity: 0;
   transform: translateX(50px);
@@ -182,7 +182,7 @@ body {
 }
 
 .image-content img {
-  width: 300px; /* reduced width to fit inside page */
+  width: 300px; /* adjust to fit page */
   height: auto;
   border-radius: 0;
   object-fit: contain;
