@@ -1,74 +1,93 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #1C2826;
-  color: #F0F0E8;
+/* Reset */
+* {
   margin: 0;
   padding: 0;
-  line-height: 1.7;
+  box-sizing: border-box;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #1C2826;
+  color: #F0F0E8;
+  line-height: 1.8;
+  padding: 20px;
 }
 
 /* Title */
-.title {
+.project-header {
   text-align: center;
-  font-size: 36px;
-  margin-bottom: 50px;
-  color: #74B0AB;
+  margin: 40px 0;
 }
 
-/* Section Layout */
-.section {
+.project-header h1 {
+  font-size: 36px;
+  color: #74B0AB;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Sections */
+.project-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  margin-bottom: 60px;
+  margin: 40px 0;
 }
 
-.section.reverse {
+.project-section.reverse {
   flex-direction: row-reverse;
 }
 
-/* Text */
-.text {
+.project-section .text {
   flex: 1;
+}
+
+.project-section .text p {
   font-size: 18px;
-  color: #F0F0E8;
+  margin-bottom: 20px;
   text-align: justify;
 }
 
-/* Image */
-.image {
+.project-section .text ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.project-section .image {
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-.image img {
-  width: 100%;
-  max-width: 500px;
+.project-section .image img {
+  max-width: 100%;
+  height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-  object-fit: contain;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
 /* Conclusion */
-.conclusion {
-  margin-top: 40px;
-  padding: 20px;
-  background-color: #2A3836;
-  border-radius: 12px;
+.project-conclusion {
+  background: #2A3836;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 50px auto;
+  max-width: 900px;
+  text-align: center;
 }
 
-.conclusion p {
+.project-conclusion p {
   font-size: 18px;
-  text-align: center;
-  color: #F0F0E8;
+  color: #E0E0E0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .project-section {
+    flex-direction: column;
+  }
+  .project-section.reverse {
+    flex-direction: column;
+  }
 }
