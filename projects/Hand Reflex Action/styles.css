@@ -1,113 +1,74 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   background-color: #1C2826;
   color: #F0F0E8;
+  margin: 0;
+  padding: 0;
   line-height: 1.7;
 }
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-  background-color: #1C2826;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-.navbar .logo a {
-  color: #F0F0E8;
-  font-size: 24px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.navbar ul li a {
-  color: #F0F0E8;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.navbar ul li a:hover,
-.navbar ul li a.active {
+/* Title */
+.title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
   color: #74B0AB;
 }
 
-/* Project Detail Section */
-.project-detail {
+/* Section Layout */
+.section {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 140px 80px 80px 80px;
   gap: 40px;
-  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.section.reverse {
+  flex-direction: row-reverse;
 }
 
 /* Text */
-.project-text {
-  flex: 1 1 50%;
-  min-width: 300px;
-}
-
-.project-text h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.project-text p {
-  font-size: 16px;
-  margin-bottom: 20px;
+.text {
+  flex: 1;
+  font-size: 18px;
+  color: #F0F0E8;
   text-align: justify;
 }
 
-/* Images */
-.project-images {
-  flex: 1 1 45%;
+/* Image */
+.image {
+  flex: 1;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  justify-content: center;
   align-items: center;
-  min-width: 250px;
 }
 
-.project-images img {
+.image img {
   width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  max-height: 350px;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  object-fit: contain;
 }
 
-/* Responsive */
-@media screen and (max-width: 900px) {
-  .project-detail {
-    flex-direction: column;
-    padding: 140px 20px 20px 20px;
-  }
+/* Conclusion */
+.conclusion {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #2A3836;
+  border-radius: 12px;
+}
 
-  .project-images {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .project-images img {
-    max-width: 45%;
-    max-height: 250px;
-  }
+.conclusion p {
+  font-size: 18px;
+  text-align: center;
+  color: #F0F0E8;
 }
