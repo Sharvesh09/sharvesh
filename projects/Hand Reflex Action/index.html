@@ -3,78 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hand Reflex Action | Project</title>
+  <title>Hand Reflex Action</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">
-      <a href="../index.html">SHARVESH S</a>
-    </div>
-    <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../about/index.html">About</a></li>
-      <li><a href="../skills/index.html">Skills</a></li>
-      <li><a href="../projects/index.html" class="active">Projects</a></li>
-      <li><a href="../contact/index.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Project Title -->
-  <header class="project-header">
+  <header>
     <h1>HAND REFLEX ACTION</h1>
   </header>
 
-  <!-- Section 1 -->
-  <section class="project-section">
-    <div class="text">
+  <main>
+    <!-- Section 1 -->
+    <section class="content-section">
+      <div class="text">
+        <p>
+          Reflex actions are quick, involuntary responses to stimuli that occur without conscious thought.
+          One common example is the hand withdrawal reflex, which occurs when we touch something hot or sharp.
+          This response is controlled by a reflex arc, a simple nerve pathway involving a sensory neuron,
+          spinal cord, and motor neuron. In this project, we simulate the hand reflex mechanism using
+          an Arduino-based setup, where a stimulus triggers an automatic response, demonstrating how
+          the nervous system reacts instantly to protect the body from harm.
+        </p>
+      </div>
+      <div class="image">
+        <img src="HANDPHOTO1.png" alt="Hand Reflex Setup">
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="content-section reverse">
+      <div class="image">
+        <img src="HANDPHOTO2.png" alt="Hand Reflex Mechanism">
+      </div>
+      <div class="text">
+        <p>
+          In our project, this natural reflex mechanism is simulated using an Arduino,
+          LM35 temperature sensor, and a servo motor:
+        </p>
+        <ul>
+          <li>The LM35 sensor detects rising temperature, mimicking a harmful stimulus.</li>
+          <li>The Arduino processes the sensor data, acting like the spinal cord in the human body.</li>
+          <li>If the temperature exceeds a set limit, the servo motor is triggered.</li>
+          <li>The servo then moves the hand model away, simulating the reflex action.</li>
+        </ul>
+        <p>
+          This project visually demonstrates how reflex arcs work: detecting danger and reacting instantly
+          without waiting for conscious brain decisions — just like in real human reflexes.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="conclusion">
       <p>
-        Reflex actions are quick, involuntary responses to stimuli that occur without conscious thought. 
-        One common example is the hand withdrawal reflex, which occurs when we touch something hot or sharp. 
-        This response is controlled by a reflex arc, a simple nerve pathway involving a sensory neuron, 
-        spinal cord, and motor neuron. In this project, we simulate the hand reflex mechanism using an 
-        Arduino-based setup, where a stimulus triggers an automatic response, demonstrating how the nervous 
-        system reacts instantly to protect the body from harm.
+        This project successfully demonstrates the concept of a hand reflex action using an Arduino,
+        LM35 temperature sensor, and a servo motor. By simulating the reflex arc, it highlights how
+        the human body responds rapidly to harmful stimuli without conscious effort. The model provides
+        a clear understanding of how sensory input is processed and translated into immediate motor
+        response through a simple yet effective electronic representation. This not only reinforces
+        biological learning but also shows how technology can be used to mimic human physiological processes.
       </p>
-    </div>
-    <div class="image">
-      <img src="HANDPHOTO1.png" alt="Hand Reflex Action Setup">
-    </div>
-  </section>
-
-  <!-- Section 2 -->
-  <section class="project-section reverse">
-    <div class="image">
-      <img src="HANDPHOTO2.png" alt="Hand Reflex Action Demo">
-    </div>
-    <div class="text">
-      <h2>How It Works</h2>
-      <ul>
-        <li>The <strong>LM35 sensor</strong> detects rising temperature, mimicking a harmful stimulus.</li>
-        <li>The <strong>Arduino</strong> processes the sensor data, acting like the spinal cord in the human body.</li>
-        <li>If the temperature exceeds a set limit, the <strong>servo motor</strong> is triggered.</li>
-        <li>The servo then moves the hand model away, simulating the reflex action.</li>
-      </ul>
-      <p>
-        This project visually demonstrates how reflex arcs work: detecting danger and reacting instantly 
-        without waiting for conscious brain decisions — just like in real human reflexes.
-      </p>
-    </div>
-  </section>
-
-  <!-- Conclusion -->
-  <section class="project-conclusion">
-    <p>
-      This project successfully demonstrates the concept of a hand reflex action using an Arduino, LM35 
-      temperature sensor, and a servo motor. By simulating the reflex arc, it highlights how the human 
-      body responds rapidly to harmful stimuli without conscious effort. The model provides a clear 
-      understanding of how sensory input is processed and translated into immediate motor response 
-      through a simple yet effective electronic representation. This not only reinforces biological 
-      learning but also shows how technology can be used to mimic human physiological processes.
-    </p>
-  </section>
-
+    </section>
+  </main>
 </body>
 </html>
