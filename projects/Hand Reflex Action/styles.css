@@ -5,78 +5,88 @@
   box-sizing: border-box;
 }
 
+/* Body */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #1C2826; /* dark theme */
+  font-family: 'Poppins', sans-serif;
+  background-color: #1C2826;
   color: #F0F0E8;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* Container */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 0;
+/* Navbar */
+.navbar {
+  background-color: #1C2826;
+  color: #F0F0E8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Title */
-.page-title {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 50px;
+.navbar h1 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.back-btn {
   color: #74B0AB;
-  letter-spacing: 2px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
-/* Sections */
-.section {
+.back-btn:hover {
+  color: #5a8e89;
+}
+
+/* Project Sections */
+.project-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
-  margin-bottom: 60px;
+  gap: 40px;
+  padding: 80px 100px;
 }
 
-.section.reverse {
+.project-section.alt {
   flex-direction: row-reverse;
 }
 
-/* Text */
-.text {
-  flex: 1;
-  font-size: 18px;
-}
-
-/* Lists inside text */
-.text ul {
-  margin: 15px 0;
-  padding-left: 20px;
-}
-
-.text li {
-  margin-bottom: 8px;
-}
-
-/* Image */
-.image {
+.project-section .text {
   flex: 1;
 }
 
-.image img {
+.project-section .text p {
+  font-size: 17px;
+  text-align: justify;
+}
+
+.project-section .image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.project-section .image img {
   width: 100%;
-  height: 280px; /* fixed landscape size */
-  object-fit: cover; /* makes it landscape crop */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  max-width: 960px; /* Keeps proper proportion */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  object-fit: contain;
 }
 
-/* Conclusion */
-.conclusion {
-  background-color: #2A3836;
-  padding: 25px;
-  border-radius: 10px;
+/* Summary Section */
+.summary {
+  padding: 60px 100px 100px;
   font-size: 18px;
   text-align: justify;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  background-color: #22312f;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
