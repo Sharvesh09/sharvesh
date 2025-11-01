@@ -10,10 +10,11 @@ body {
   font-family: Arial, sans-serif;
   background-color: #1C2826;
   color: #F0F0E8;
-  height: 100vh;
+  min-height: 100vh; /* allow full content height */
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: auto; /* enable vertical scroll if needed */
+  overflow-x: hidden; /* prevent horizontal scroll */
 }
 
 /* Navbar */
@@ -57,13 +58,16 @@ body {
 }
 
 /* About Section */
+
 .about {
+  flex: 1;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  padding: 90px 50px 40px 50px;
-  height: calc(100vh - 70px);
+  align-items: flex-start;
+  padding: 120px 80px 60px 80px; /* added bottom padding */
+  gap: 40px;
 }
+
 
 /* Left Column */
 .about-left {
