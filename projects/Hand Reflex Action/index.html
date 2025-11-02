@@ -8,22 +8,46 @@
 </head>
 <body>
 
-  <!-- Navbar / Back Button -->
+  <!-- Navbar (same as other pages) -->
   <nav class="navbar">
-    <a href="../projects/index.html" class="back-btn">← Back to Projects</a>
-    <h1>HAND REFLEX ACTION</h1>
+    <div class="nav-container">
+      <h1 class="logo">BIOMED</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </nav>
+
+  <!-- Back Button -->
+  <div class="back-container">
+    <a href="projects.html" class="back-btn">← Back to Projects</a>
+  </div>
+
+  <!-- Project Hero Section -->
+  <section class="project-hero">
+    <h1>HAND REFLEX ACTION</h1>
+    <p>
+      Reflex actions are rapid, automatic, and protective responses that occur without conscious control.
+      One of the best examples is the hand withdrawal reflex — when we instantly pull our hand away after
+      touching something hot or sharp. This quick reaction prevents tissue damage and ensures survival.
+      In this project, we replicate that natural response using an Arduino-based system that reacts
+      immediately to a harmful stimulus, just as the human nervous system does. The project bridges
+      biology and electronics, showing how sensors, microcontrollers, and actuators can mimic neural behavior.
+    </p>
+  </section>
 
   <!-- Section 1 -->
   <section class="project-section">
     <div class="text">
       <p>
-        Reflex actions are quick, involuntary responses to stimuli that occur without conscious thought.
-        One common example is the hand withdrawal reflex, which occurs when we touch something hot or sharp.
-        This response is controlled by a reflex arc — a simple nerve pathway involving a sensory neuron, spinal cord,
-        and motor neuron. In this project, we simulate the hand reflex mechanism using an Arduino-based setup,
-        where a stimulus triggers an automatic response, demonstrating how the nervous system reacts instantly to
-        protect the body from harm.
+        The human reflex arc involves three essential components — sensory neurons, the spinal cord, and motor neurons.
+        When a stimulus is detected by receptors in the skin, sensory neurons send signals to the spinal cord.
+        The spinal cord processes this input and instantly transmits a response through motor neurons to move the muscles.
+        In our setup, we use an <b>LM35 temperature sensor</b> to detect heat, the <b>Arduino</b> as the processing unit,
+        and a <b>servo motor</b> to simulate muscle movement — all working in harmony to replicate this biological mechanism.
       </p>
     </div>
     <div class="image">
@@ -38,27 +62,22 @@
     </div>
     <div class="text">
       <p>
-        In our project, this natural reflex mechanism is simulated using an Arduino, LM35 temperature sensor,
-        and a servo motor:
-        <br><br>
-        • The LM35 sensor detects rising temperature, mimicking a harmful stimulus.<br>
-        • The Arduino processes the sensor data, acting like the spinal cord in the human body.<br>
-        • If the temperature exceeds a set limit, the servo motor is triggered.<br>
-        • The servo then moves the hand model away, simulating the reflex action.<br><br>
-        This project visually demonstrates how reflex arcs work — detecting danger and reacting instantly
-        without waiting for conscious brain decisions, just like in real human reflexes.
+        The LM35 continuously monitors temperature levels, and when the readings cross a safe threshold,
+        the Arduino immediately triggers the servo motor. This movement represents the hand pulling away
+        from a dangerous stimulus. The process is instantaneous and does not require external input,
+        beautifully imitating the body's natural reflex mechanism that operates independently of the brain.
       </p>
     </div>
   </section>
 
-  <!-- Section 3 -->
+  <!-- Conclusion -->
   <section class="summary">
     <p>
-      This project successfully demonstrates the concept of a hand reflex action using an Arduino, LM35 temperature sensor,
-      and a servo motor. By simulating the reflex arc, it highlights how the human body responds rapidly to harmful stimuli
-      without conscious effort. The model provides a clear understanding of how sensory input is processed and translated
-      into immediate motor response through a simple yet effective electronic representation. This not only reinforces
-      biological learning but also shows how technology can be used to mimic human physiological processes.
+      This project demonstrates how electronic components can represent complex biological functions.
+      By building a reflex arc model with Arduino, LM35, and a servo motor, we provide a deeper understanding
+      of how the nervous system prioritizes survival through immediate action. Beyond its educational value,
+      this project showcases how biomedical engineering blends life sciences and technology to recreate
+      the brilliance of human physiology.
     </p>
   </section>
 
